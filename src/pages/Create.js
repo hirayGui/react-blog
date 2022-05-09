@@ -1,12 +1,13 @@
+import React from 'react';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('Toninho');
     const [isPending, setIsPending] = useState(false);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,13 +15,13 @@ const Create = () => {
 
         setIsPending(true);
 
-        fetch('http://localhost:3000/blogs', {
+        fetch('http://localhost:3001/blogs', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)
         }).then(() => {
             setIsPending(false);
-            history.push('/');
+            navigate.push('/');
         })
     }
 

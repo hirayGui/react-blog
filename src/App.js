@@ -1,9 +1,10 @@
+import React from 'react'
 import Navbar from './pages/Navbar';
 import Home from './pages/Home';
 import Create from './pages/Create';
 import BlogDetails from './pages/BlogDetails';
 import NotFound from './pages/NotFound';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App(){
   return(
@@ -11,25 +12,25 @@ function App(){
       <div className='App'>
         <Navbar />
         <div className='content'>
-          <Switch>
+          <Routes>
 
-            <Route exact path='/'>
-              <Home />
+            <Route exact path="/">
+              <Home /> 
             </Route>
             
-            <Route path='create'>
+            <Route path="create">
               <Create />  
             </Route>  
 
-            <Route path='/blogs/:id'>
+            <Route path="/blogs/:id">
               <BlogDetails />
             </Route>
 
-            <Route path='*'>
+            <Route path="*">
               <NotFound />
             </Route>
 
-          </Switch>
+          </Routes>
         </div>
       </div>
     </Router>
