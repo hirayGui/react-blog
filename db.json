@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "Ricardo bobão",
+      "body": "Me devolve meu dinheiro seu safado",
+      "author": "Bruno",
+      "id": 7
+    },
+    {
+      "title": "Eu sou a opção",
+      "body": "Sou candidato a fazer um bom trabalho no Ministério da Fazenda e corrigir essa trajetória fiscal que temos desde a Constituinte. Conseguindo fazer isso, estarei realizado profissionalmente.",
+      "author": "Meireles",
+      "id": 8
+    }
+  ]
+}

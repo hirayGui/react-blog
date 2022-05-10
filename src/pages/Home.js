@@ -10,7 +10,7 @@ function Home() {
         <div className='home'>
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
-            <BlogList blogs={blogs} title="Todos os blogs"/>
+            <BlogList blogs={blogs} title="Todos as postagens"/>
         </div>
     )
 }

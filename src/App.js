@@ -14,21 +14,13 @@ function App(){
         <div className='content'>
           <Routes>
 
-            <Route exact path="/">
-              <Home /> 
-            </Route>
+            <Route exact path="/" element={<Home />} />
             
-            <Route path="create">
-              <Create />  
-            </Route>  
+            <Route exact path="create" element={<Create />} />
 
-            <Route path="/blogs/:id">
-              <BlogDetails />
-            </Route>
+            <Route exact path="/blogs/:id" element={<BlogDetails />} />
 
-            <Route path="*">
-              <NotFound />
-            </Route>
+            <Route path="*" element={<NotFound />} />
 
           </Routes>
         </div>

@@ -8,10 +8,10 @@ const BlogDetails = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch('http://localhost/3001/blogs/' + blog.id, {
+        fetch('http://localhost:3001/blogs/' + blog.id, {
             method: 'DELETE'
         }).then(()=>{
-            navigate.push('/');
+            navigate('/');
         })
     }
 

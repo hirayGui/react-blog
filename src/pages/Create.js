@@ -21,7 +21,7 @@ const Create = () => {
             body: JSON.stringify(blog)
         }).then(() => {
             setIsPending(false);
-            navigate.push('/');
+            navigate('/');
         })
     }
 
